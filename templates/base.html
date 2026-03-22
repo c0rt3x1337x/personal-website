@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{PAGE_TITLE}}</title>
+    <meta name="description" content="{{META_DESCRIPTION}}" />
+    <link rel="stylesheet" href="{{STYLESHEET}}" />
+  </head>
+  <body class="{{BODY_CLASS}}">
+    <div class="desktop-sky" aria-hidden="true">
+      <span class="star star-a"></span>
+      <span class="star star-b"></span>
+      <span class="star star-c"></span>
+      <span class="star star-d"></span>
+      <span class="star star-e"></span>
+    </div>
+
+    <!-- Desktop icons — link to sections, visible on wide viewports -->
+    <div class="desktop-icons">
+      <a class="desk-icon" href="{{ROOT_PATH}}rants/">
+        <svg class="desk-icon-art" width="32" height="28" viewBox="0 0 32 28" fill="none" aria-hidden="true">
+          <rect x="0" y="7" width="32" height="20" rx="1" fill="#5577cc" stroke="#2244aa" stroke-width="1"/>
+          <rect x="0" y="2" width="13" height="7" rx="1" fill="#5577cc" stroke="#2244aa" stroke-width="1"/>
+          <rect x="1" y="8" width="30" height="18" fill="#7799ee"/>
+          <rect x="0" y="7" width="32" height="2" fill="#5577cc"/>
+        </svg>
+        <span class="desk-icon-label">rants/</span>
+      </a>
+
+      <a class="desk-icon" href="{{ROOT_PATH}}tech/">
+        <svg class="desk-icon-art" width="32" height="28" viewBox="0 0 32 28" fill="none" aria-hidden="true">
+          <rect x="0" y="7" width="32" height="20" rx="1" fill="#4488cc" stroke="#1a5599" stroke-width="1"/>
+          <rect x="0" y="2" width="13" height="7" rx="1" fill="#4488cc" stroke="#1a5599" stroke-width="1"/>
+          <rect x="1" y="8" width="30" height="18" fill="#66aaee"/>
+          <rect x="0" y="7" width="32" height="2" fill="#4488cc"/>
+          <!-- small gear hint -->
+          <circle cx="22" cy="17" r="4" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+          <circle cx="22" cy="17" r="1.5" fill="rgba(255,255,255,0.5)"/>
+        </svg>
+        <span class="desk-icon-label">tech/</span>
+      </a>
+
+      <a class="desk-icon" href="{{ROOT_PATH}}reviews/">
+        <svg class="desk-icon-art" width="26" height="32" viewBox="0 0 26 32" fill="none" aria-hidden="true">
+          <polygon points="0,0 18,0 26,8 26,32 0,32" fill="#dde0f4" stroke="#7788cc" stroke-width="1"/>
+          <polygon points="18,0 18,8 26,8" fill="#b0b8e8" stroke="#7788cc" stroke-width="1"/>
+          <line x1="4" y1="14" x2="22" y2="14" stroke="#7788cc" stroke-width="1.2" opacity="0.6"/>
+          <line x1="4" y1="18" x2="18" y2="18" stroke="#7788cc" stroke-width="1.2" opacity="0.6"/>
+          <line x1="4" y1="22" x2="20" y2="22" stroke="#7788cc" stroke-width="1.2" opacity="0.6"/>
+          <line x1="4" y1="26" x2="14" y2="26" stroke="#7788cc" stroke-width="1.2" opacity="0.6"/>
+        </svg>
+        <span class="desk-icon-label">reviews</span>
+      </a>
+
+      <div class="desk-icon" aria-hidden="true">
+        <!-- Decorative terminal icon -->
+        <svg class="desk-icon-art" width="32" height="26" viewBox="0 0 32 26" fill="none">
+          <rect width="32" height="26" rx="2" fill="#1c1e2e" stroke="#6688aa" stroke-width="1"/>
+          <rect x="0" y="0" width="32" height="6" rx="2" fill="#0e43a6"/>
+          <rect x="0" y="4" width="32" height="2" fill="#0e43a6"/>
+          <text x="4" y="20" font-family="monospace" font-size="9" fill="#88aaff" font-weight="bold">$ _</text>
+        </svg>
+        <span class="desk-icon-label">console</span>
+      </div>
+    </div>
+
+    <div class="site-shell">
+      <header class="desktop-window main-window">
+        <div class="titlebar">
+          <div class="titlebar-brand">
+            <span class="titlebar-appicon" aria-hidden="true"></span>
+            <div class="titlebar-text">kanan@notebook:~/</div>
+          </div>
+          <div class="titlebar-controls" aria-hidden="true">
+            <span class="control-button minimize"></span>
+            <span class="control-button maximize"></span>
+            <span class="control-button close"></span>
+          </div>
+        </div>
+        <div class="window-frame">
+          <div class="topbar">
+            <nav class="nav-tabs" aria-label="Primary">
+              {{NAVIGATION}}
+            </nav>
+            <div class="topbar-label">
+              static · markdown · github pages
+            </div>
+          </div>
+          <main class="content-area">
+            {{CONTENT}}
+          </main>
+        </div>
+      </header>
+      <footer class="taskbar">
+        <div class="taskbar-left">
+          <a class="taskbar-start" href="{{ROOT_PATH}}">⊞ Start</a>
+          <div class="taskbar-button">kanan@notebook:~/</div>
+        </div>
+        <div class="taskbar-right">
+          <div class="taskbar-status">reviews / rants / tech</div>
+          <div class="taskbar-clock">{{BUILD_TIME}}</div>
+        </div>
+      </footer>
+    </div>
+  <script>
+  (function () {
+    // 0=skip 1=#111 2=#eee 3=#f4aaaa
+    var S = [
+      [0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0],
+      [0,0,1,2,1,0,0,0,0,1,2,1,0,0,0,0],
+      [0,0,1,3,1,0,0,0,0,1,3,1,0,0,0,0],
+      [0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0],
+      [0,0,1,2,2,2,2,2,2,2,2,1,0,0,0,0],
+      [0,0,1,2,1,1,2,2,1,1,2,1,0,0,0,0],
+      [0,0,1,2,1,1,2,2,1,1,2,1,0,0,0,0],
+      [0,0,1,2,2,2,2,3,2,2,2,1,0,0,0,0],
+      [0,0,1,2,2,2,2,2,2,2,2,1,0,0,0,0],
+      [0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0],
+      [0,0,1,2,2,2,2,2,2,2,2,1,0,0,0,0],
+      [0,0,1,2,2,2,2,2,2,2,2,1,0,1,0,0],
+      [0,0,1,2,2,2,2,2,2,2,2,1,0,1,0,0],
+      [0,0,1,2,2,2,2,2,2,2,2,1,1,1,0,0],
+      [0,0,1,2,1,0,0,0,0,1,2,1,0,0,0,0],
+      [0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0],
+    ];
+    var CLR = ['','#111111','#eeeeee','#f4aaaa'];
+    var SC = 2, W = 16, H = 16;
+    var hw = W * SC / 2, hh = H * SC / 2;
+
+    var c = document.createElement('canvas');
+    c.width = W * SC; c.height = H * SC;
+    c.style.cssText = 'position:fixed;pointer-events:none;z-index:9999;image-rendering:pixelated;image-rendering:crisp-edges;left:0;top:0;will-change:transform';
+    document.body.appendChild(c);
+
+    var ctx = c.getContext('2d');
+    ctx.imageSmoothingEnabled = false;
+    S.forEach(function(row, y) {
+      row.forEach(function(p, x) {
+        if (!p) return;
+        ctx.fillStyle = CLR[p];
+        ctx.fillRect(x * SC, y * SC, SC, SC);
+      });
+    });
+
+    var mx = -500, my = -500, cx = -500, cy = -500, right = true;
+
+    window.addEventListener('mousemove', function(e) {
+      if (e.clientX > mx + 1) right = true;
+      else if (e.clientX < mx - 1) right = false;
+      mx = e.clientX; my = e.clientY;
+    });
+
+    (function tick() {
+      cx += (mx - cx) * 0.12;
+      cy += (my - cy) * 0.12;
+      var x = Math.round(cx), y = Math.round(cy);
+      c.style.transform = right
+        ? 'translate(' + (x - hw) + 'px,' + (y - hh) + 'px)'
+        : 'translate(' + (x + hw) + 'px,' + (y - hh) + 'px) scaleX(-1)';
+      requestAnimationFrame(tick);
+    })();
+  })();
+  </script>
+  </body>
+</html>
