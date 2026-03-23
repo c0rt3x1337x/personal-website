@@ -58,6 +58,7 @@ body {
   font-size: 13px;
   line-height: 1.55;
   background: var(--desktop);
+  padding-left: 86px; /* clear desktop icon column (52px icon + 1.2rem offset + gap) */
 }
 
 a {
@@ -890,6 +891,7 @@ h1, h2, h3 {
 
   .desktop-icons { display: none; }
   .topbar-label { display: none; }
+  body { padding-left: 0; }
 }
 
 @media (max-width: 760px) {

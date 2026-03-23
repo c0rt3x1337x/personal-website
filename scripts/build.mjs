@@ -181,12 +181,13 @@ async function writeHomePage(template, allSections, allEntries, mediumPosts) {
           <span class="eyebrow">Personal Website</span>
           <h1>Kanan Husayn</h1>
           <p class="lead">
-            22-year-old cybersecurity student in Budapest, interested in AI,
-            philosophy, sci-fi, and music.
+            Cybersecurity researcher based in Budapest, interested in AI,
+            blockchain, and systems. Occasionally caffeinated, usually with a
+            guitar nearby.
           </p>
           <p>
-            A quiet static notebook for longer thoughts, technical essays,
-            and reviews worth keeping close.
+            A personal notebook for technical essays, slower thoughts, and
+            reviews worth returning to.
           </p>
         </div>
         <aside class="status-panel">
